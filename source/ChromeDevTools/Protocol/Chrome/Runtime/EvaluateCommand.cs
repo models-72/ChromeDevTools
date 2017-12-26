@@ -27,7 +27,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? IncludeCommandLineAPI { get; set; }
 		/// <summary>
-		/// Gets or sets In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
+		/// Gets or sets In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides `setPauseOnException` state.
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? Silent { get; set; }
@@ -52,7 +52,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? UserGesture { get; set; }
 		/// <summary>
-		/// Gets or sets Whether execution should <code>await</code> for resulting value and return once awaited promise is resolved.
+		/// Gets or sets Whether execution should `await` for resulting value and return once awaited promise is resolved.
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? AwaitPromise { get; set; }

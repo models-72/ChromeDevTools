@@ -25,12 +25,12 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? Writable { get; set; }
 		/// <summary>
-		/// Gets or sets A function which serves as a getter for the property, or <code>undefined</code> if there is no getter (accessor descriptors only).
+		/// Gets or sets A function which serves as a getter for the property, or `undefined` if there is no getter (accessor descriptors only).
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public RemoteObject Get { get; set; }
 		/// <summary>
-		/// Gets or sets A function which serves as a setter for the property, or <code>undefined</code> if there is no setter (accessor descriptors only).
+		/// Gets or sets A function which serves as a setter for the property, or `undefined` if there is no setter (accessor descriptors only).
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public RemoteObject Set { get; set; }
@@ -53,7 +53,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? IsOwn { get; set; }
 		/// <summary>
-		/// Gets or sets Property symbol object, if the property is of the <code>symbol</code> type.
+		/// Gets or sets Property symbol object, if the property is of the `symbol` type.
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public RemoteObject Symbol { get; set; }

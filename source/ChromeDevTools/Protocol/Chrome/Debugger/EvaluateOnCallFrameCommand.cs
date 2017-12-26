@@ -21,7 +21,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger
 		/// </summary>
 		public string Expression { get; set; }
 		/// <summary>
-		/// Gets or sets String object group name to put result into (allows rapid releasing resulting object handles using <code>releaseObjectGroup</code>).
+		/// Gets or sets String object group name to put result into (allows rapid releasing resulting object handles using `releaseObjectGroup`).
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string ObjectGroup { get; set; }
@@ -31,7 +31,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? IncludeCommandLineAPI { get; set; }
 		/// <summary>
-		/// Gets or sets In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
+		/// Gets or sets In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides `setPauseOnException` state.
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? Silent { get; set; }

@@ -6,5 +6,7 @@
     "win": {}
   },
   "dependencies": {
+    "Newtonsoft.Json": "10.0.3",
+    "WebSocket4Net": "0.15.1"
   }
 }
