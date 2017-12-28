@@ -91,8 +91,25 @@ namespace MasterDevs.ChromeDevTools
         private Task<TDerived> CastTaskResult<TBase, TDerived>(Task<TBase> task) where TDerived: TBase
         {
             var tcs = new TaskCompletionSource<TDerived>();
-            task.ContinueWith(t => tcs.SetResult((TDerived)t.Result),
-                TaskContinuationOptions.OnlyOnRanToCompletion);
+            task.ContinueWith((t) =>
+            {
+                if (t.Result is TDerived)
+                {
+                    tcs.SetResult((TDerived)t.Result);
+                }
+                else
+                {
+                    ErrorResponse error = t.Result as ErrorResponse;
+                    if (error != null)
+                    {
+                        tcs.SetException(new ApplicationException(error.Error.Message));
+                    }
+                    else
+                    {
+                        tcs.SetException(new ApplicationException($"Unable to convert type {t.Result.GetType().Name} to CommandResponse"));
+                    }
+                }
+            }, TaskContinuationOptions.OnlyOnRanToCompletion);
             task.ContinueWith(t => tcs.SetException(t.Exception.InnerExceptions),
                 TaskContinuationOptions.OnlyOnFaulted);
             task.ContinueWith(t => tcs.SetCanceled(),
