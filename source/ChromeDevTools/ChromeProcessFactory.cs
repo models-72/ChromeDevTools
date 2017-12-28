@@ -16,10 +16,14 @@ namespace MasterDevs.ChromeDevTools
             ChromePath = chromePath;
         }
 
-        public IChromeProcess Create(int port, bool headless)
+        public IChromeProcess Create(int port, bool headless, string userDirectory = null)
         {
-            string path = Path.GetRandomFileName();
-            var directoryInfo = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), path));
+            if (string.IsNullOrEmpty(userDirectory))
+            {
+                string path = Path.GetRandomFileName();
+                userDirectory = Path.Combine(Path.GetTempPath(), path);
+            }
+            var directoryInfo = Directory.CreateDirectory(userDirectory);
             var remoteDebuggingArg = $"--remote-debugging-port={port}";
             var userDirectoryArg = $"--user-data-dir=\"{directoryInfo.FullName}\"";
             const string headlessArg = "--headless --disable-gpu";
