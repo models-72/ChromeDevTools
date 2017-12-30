@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterDevs.ChromeDevTools.Core", "ChromeDevTools\MasterDevs.ChromeDevTools.Core.csproj", "{7E1458FD-4AF1-445C-AA1F-A812BFF80658}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E1458FD-4AF1-445C-AA1F-A812BFF80658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1458FD-4AF1-445C-AA1F-A812BFF80658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1458FD-4AF1-445C-AA1F-A812BFF80658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1458FD-4AF1-445C-AA1F-A812BFF80658}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8AABB9E-B5D1-43B1-B957-54F00A8E17DA}
+	EndGlobalSection
+EndGlobal
