@@ -6,11 +6,11 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
-	/// Controls whether browser will open a new inspector window for connected pages.
+	/// Returns present frame tree structure.
 	/// </summary>
-	[CommandResponse(ProtocolName.Page.SetAutoAttachToCreatedPages)]
+	[Command(ProtocolName.Page.GetFrameTree)]
 	[SupportedBy("Chrome")]
-	public class SetAutoAttachToCreatedPagesCommandResponse
+	public class GetFrameTreeCommand: ICommand<GetFrameTreeCommandResponse>
 	{
 	}
 }

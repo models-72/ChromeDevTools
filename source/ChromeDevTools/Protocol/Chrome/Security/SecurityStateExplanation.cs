@@ -15,6 +15,10 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Security
 		/// </summary>
 		public SecurityState SecurityState { get; set; }
 		/// <summary>
+		/// Gets or sets Title describing the type of factor.
+		/// </summary>
+		public string Title { get; set; }
+		/// <summary>
 		/// Gets or sets Short phrase describing the type of factor.
 		/// </summary>
 		public string Summary { get; set; }

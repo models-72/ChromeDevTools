@@ -28,12 +28,17 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public double BufferUsageReportingInterval { get; set; }
 		/// <summary>
-		/// Gets or sets Whether to report trace events as series of dataCollected events or to save trace to a stream (defaults to <code>ReportEvents</code>).
+		/// Gets or sets Whether to report trace events as series of dataCollected events or to save trace to a stream (defaults to `ReportEvents`).
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string TransferMode { get; set; }
 		/// <summary>
-		/// Gets or sets 
+		/// Gets or sets Compression format to use. This only applies when using `ReturnAsStream` transfer mode (defaults to `none`)
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public string StreamCompression { get; set; }
+		/// <summary>
+		/// Gets or sets TraceConfig
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public TraceConfig TraceConfig { get; set; }

@@ -4,17 +4,14 @@ using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Accessibility{
+namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing{
 	/// <summary>
-	/// States which apply to widgets.
+	/// Compression type to use for traces returned via streams.
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
-	public enum AXWidgetStates
+	public enum StreamCompression
 	{
-			Checked,
-			Expanded,
-			Modal,
-			Pressed,
-			Selected,
+			None,
+			Gzip,
 	}
 }

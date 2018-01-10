@@ -16,5 +16,10 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string Stream { get; set; }
+		/// <summary>
+		/// Gets or sets Compression format of returned stream.
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public StreamCompression StreamCompression { get; set; }
 	}
 }

@@ -72,5 +72,15 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? IgnoreInvalidPageRanges { get; set; }
+		/// <summary>
+		/// Gets or sets HTML template for the print header. Should be valid HTML markup with following classes used to inject printing values into them: - date - formatted print date - title - document title - url - document location - pageNumber - current page number - totalPages - total pages in the document  For example, <span class=title></span> would generate span containing the title.
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public string HeaderTemplate { get; set; }
+		/// <summary>
+		/// Gets or sets HTML template for the print footer. Should use the same format as the `headerTemplate`.
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public string FooterTemplate { get; set; }
 	}
 }

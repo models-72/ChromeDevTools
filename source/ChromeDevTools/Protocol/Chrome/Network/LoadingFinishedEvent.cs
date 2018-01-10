@@ -23,5 +23,10 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
 		/// Gets or sets Total number of bytes received for this request.
 		/// </summary>
 		public double EncodedDataLength { get; set; }
+		/// <summary>
+		/// Gets or sets Set when response was blocked due to being cross-site document response.
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public bool? BlockedCrossSiteDocument { get; set; }
 	}
 }
